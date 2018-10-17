@@ -1,0 +1,100 @@
+﻿=========redux=============
+npm install --save redux
+npm install --save react-redux
+npm install --save-dev redux-devtools
+redux还要拆分成小reducer
+redux拆分成函数
+if (mutations[action.type]) {
+  return mutations[action.type](state,type)
+}
+不拆分出不同的静态类型
+action也不先不拆分了
+---配合redux的----
+react-redux 必用 接口conect数据
+immutable 不很好用 有了新的这个不用了
+immer 好用 高级一些深度合并没被修改了体会修改的返回新对象 pureComponent
+因为异步也不放到action拆分了 也暂时不用thunk中间件了
+=========路由4.0=========
+npm i react-router-dom
+可以重定向 redirect
+withRouter(组件构造函数)  this.props.history.push()
+文件1
+import createHistory from 'history/createBrowserHistory';
+export default createHistory();
+文件2
+import history from './history';
+const skip = () => {
+    history.push("/");
+}
+===css================
+less  reload
+Tachyons 库封装成类名写
+需要less 文件直接读取
+
+
+======其他=======
+reselect 计算属性
+小图片 看看怎么引进来
+动画实现库 react-transition-group CSSTansition loading.io 加载动画
+react-loadable 异步加载组件
+mobx 更好用些以后用看看
+styled-components js写css导出一个自定义标签带样式了可复用
+
+
+=======stylus启动支持===========
+npm install stylus stylus-loader --save-dev
+npm run eject
+> webpack.config.dev.js
+ module: {
+    strictExportPresence: true,
+    rules: [
+        ...
+         oneOf: [
+            ...
+            {
+            test: /\.styl$/,
+            loaders: ['style-loader', 'css-loader', 'stylus-loader']
+          },
+         ]
+    ]
+    ...
+  }
+// 在oneOf的最底部找到file-loader
+  {
+    exclude: [/\.(js|jsx|mjs)$/, /\.html$/, /\.json$/, /\.styl$/], // 添加styl文件的解析
+    loader: require.resolve('file-loader'),
+    options: {
+        name: 'static/media/[name].[hash:8].[ext]',
+    },
+  },
+
+
+=====styled-jsx增加stylus支持============
+> .babelrc
+npm i styled-jsx --save
+npm install --save-dev styled-jsx-plugin-stylus
+npm install --save-dev stylus
+npm run eject
+
+
+{
+  "presets": [
+    [
+      "react-app"
+    ],
+    [
+      {
+        "plugins": [
+          [
+            "styled-jsx/babel",
+            {
+              "plugins": [
+                "styled-jsx-plugin-stylus"
+              ]
+            }
+          ]
+        ]
+      }
+    ]
+  ]
+}

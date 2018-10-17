@@ -3,9 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "immer": "^1.7.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "react-scripts": "2.0.5"
+    "react-redux": "^5.0.7",
+    "react-scripts": "2.0.5",
+    "redux": "^4.0.1",
+    "styled-jsx": "^3.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -21,5 +25,9 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "styled-jsx-plugin-stylus": "^0.0.4",
+    "stylus": "^0.54.5"
+  }
 }
