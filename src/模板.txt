@@ -1,0 +1,32 @@
+import React from 'react'
+import { connect } from 'react-redux'
+
+
+
+const render = () => {
+  return (
+    <div className="">
+
+      <style jsx>{`
+
+      `}</style>
+    </div>
+  )
+}
+
+
+
+const mapState = (state) =>{
+  return {
+
+  }
+}
+
+const mapDispatch = (dispatch) => {
+  return {
+
+  }
+}
+
+
+export default connect(mapState, mapDispatch)(render)

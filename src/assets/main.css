@@ -1,0 +1,50 @@
+.btn-infoo {
+  color: #fff;
+  background-color: #02b3e4
+}
+
+.fadezoomIn-enter {
+  opacity: 0;
+  transform: scale(2.5)
+}
+.fadezoomIn-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition:  all .3s
+}
+
+.fadezoomIn-exit-active {
+  opacity: 0;
+  transform: scale(2.5);
+  transition:  all .3s
+}
+
+
+.fadezoomOut-enter {
+  opacity: 0;
+  transform: scale(0)
+}
+.fadezoomOut-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition:  all .3s
+}
+
+.fadezoomOut-exit-active {
+  opacity: 0;
+  transform: scale(0);
+  transition:  all .3s
+}
+
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition:  all .3s
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition:  all .3s
+}
