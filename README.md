@@ -1,6 +1,6 @@
 # Myforum 论坛 React版
 
-> 在线访问地址 [https://vps.hnh.me:888](https://vps.hnh.me:888)
+> 在线访问地址 [https://bbs2.hnh.me](https://bbs2.hnh.me)
 
 > 基本功能同vue版本
 
